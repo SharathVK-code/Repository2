@@ -10,6 +10,7 @@ public class day1 {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com/client");
+		driver.close();
 
 	}
 
