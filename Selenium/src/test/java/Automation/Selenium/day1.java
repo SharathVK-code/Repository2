@@ -36,7 +36,7 @@ public class day1 {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".toast-message"))));
 		driver.findElement(By.cssSelector(".btn-custom .fa-shopping-cart")).click();
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("h1"))));
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("h1")))); // explicit wait applied
 		driver.findElement(By.cssSelector("li[class='totalRow'] button")).click();
 
 		// checkout page
