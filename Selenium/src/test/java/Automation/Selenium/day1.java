@@ -9,7 +9,6 @@ public class day1 {
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-
 		driver.get("https://www.google.com");
 
 	}
