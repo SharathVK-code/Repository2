@@ -1,8 +1,6 @@
 package Automation.Selenium;
 
-import java.lang.reflect.Array;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -58,11 +56,13 @@ public class zaraCoatToCart {
 
 		// success page
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".toast-success")));
+		String cnfrmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
+		Assert.assertEquals(cnfrmMessage, "THANKYOU FOR THE ORDER.");
 		String totalOrderID = driver.findElement(By.cssSelector("tr td label[class='ng-star-inserted']")).getText();
-		System.out.println(totalOrderID);
-		Array[]<String> orderID = totalOrderID.split(" ")(2);
+		String orderID = totalOrderID.split(" ")[1].split(" ")[0];
+		System.out.println("your Order ID is:" + orderID);
 
-//		driver.close();
+		driver.close();
 
 	}
 
