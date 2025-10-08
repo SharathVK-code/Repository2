@@ -1,8 +1,11 @@
 package Automation.Selenium;
 
+import java.lang.reflect.Array;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class zaraCoatToCart {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
 		// implicit wait
@@ -36,12 +39,30 @@ public class zaraCoatToCart {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".toast-message"))));
 		driver.findElement(By.cssSelector(".btn-custom .fa-shopping-cart")).click();
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("h1")))); // explicit wait applied
-		driver.findElement(By.cssSelector("li[class='totalRow'] button")).click();
 
 		// checkout page
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("h1")))); // explicit wait applied
+		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
+		Boolean flag = cartProducts.stream().anyMatch(s -> s.getText().equalsIgnoreCase(desiredProduct));
+		Assert.assertTrue(flag);
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("li[class='totalRow'] button")).click();
 
-		driver.close();
+		// payment page
+		driver.findElement(By.xpath("//div[@class='payment__cc']//div[2]//input[1]")).sendKeys("789");
+		driver.findElement(By.xpath("//div[@class='payment__cc']//div[3]//input")).sendKeys("Sharath");
+		driver.findElement(By.cssSelector("input[placeholder='Select Country']")).sendKeys("india");
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".ta-results"))));// explicit wait
+		driver.findElement(By.cssSelector("section button:nth-child(3)")).click();
+		driver.findElement(By.cssSelector(".action__submit")).click();
+
+		// success page
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".toast-success")));
+		String totalOrderID = driver.findElement(By.cssSelector("tr td label[class='ng-star-inserted']")).getText();
+		System.out.println(totalOrderID);
+		Array[]<String> orderID = totalOrderID.split(" ")(2);
+
+//		driver.close();
 
 	}
 
