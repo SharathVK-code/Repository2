@@ -19,7 +19,6 @@ public class e2e {
 
 		// Landing page
 		LandingPage lp = new LandingPage(driver);
-		// Login Page
 		lp.goTo();
 		lp.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
