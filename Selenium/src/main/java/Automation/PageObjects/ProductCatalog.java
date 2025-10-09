@@ -1,5 +1,5 @@
 package Automation.PageObjects;
 
-public class ProductCatalogue {
+public class ProductCatalog {
 
 }

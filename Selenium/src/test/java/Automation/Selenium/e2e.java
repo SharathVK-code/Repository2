@@ -22,6 +22,8 @@ public class e2e {
 		lp.goTo();
 		lp.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
+		// Product catalog
+
 		driver.close();
 
 	}
