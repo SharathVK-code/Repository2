@@ -28,7 +28,7 @@ public class e2e {
 		pc.GetProductsList();
 		System.out.println(pc.GetProductsList().get(1).getText());
 
-//		driver.close();
+		driver.close();
 
 	}
 
