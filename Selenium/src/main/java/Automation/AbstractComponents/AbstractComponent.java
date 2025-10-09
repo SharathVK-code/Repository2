@@ -16,9 +16,9 @@ public class AbstractComponent {
 		this.driver = driver;
 	}
 
-	public void WaitForTheElementToAppear() {
+	public void WaitForTheElementToAppear(By FindBy) {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".toast-message"))));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(FindBy));
 	}
 }

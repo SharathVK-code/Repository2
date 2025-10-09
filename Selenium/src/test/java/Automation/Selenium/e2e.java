@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import Automation.PageObjects.LandingPage;
+import Automation.PageObjects.ProductCatalog;
 
 public class e2e {
 
@@ -23,8 +24,11 @@ public class e2e {
 		lp.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
 		// Product catalog
+		ProductCatalog pc = new ProductCatalog(driver);
+		pc.GetProductsList();
+		System.out.println(pc.GetProductsList().get(1).getText());
 
-		driver.close();
+//		driver.close();
 
 	}
 

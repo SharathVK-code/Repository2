@@ -1,5 +1,8 @@
 package Automation.PageObjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,6 +23,12 @@ public class ProductCatalog extends AbstractComponent {
 	}
 
 	@FindBy(id = ".mb-3")
-	WebElement products;
+	List<WebElement> products;
+
+	public List<WebElement> GetProductsList() {
+
+		WaitForTheElementToAppear(By.cssSelector(".mb-3"));
+		return products;
+	}
 
 }
