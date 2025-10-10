@@ -26,6 +26,7 @@ public class ProductCatalog extends AbstractComponent {
 	List<WebElement> products;
 
 	By productsBy = By.cssSelector(".mb-3");
+	By addToCart = By.cssSelector(".mb-3 button:last-of-type");
 
 	public List<WebElement> GetProductsList() {
 
@@ -40,8 +41,9 @@ public class ProductCatalog extends AbstractComponent {
 		return ourProd;
 	}
 
-	public void addProductToCart() {
-
+	public void addProductToCart(String productName) {
+		WebElement ourProd = getProductByName(productName);
+		ourProd.findElement(addToCart).click();
 	}
 
 }
