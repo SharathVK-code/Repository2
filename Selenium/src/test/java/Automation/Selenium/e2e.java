@@ -1,8 +1,10 @@
 package Automation.Selenium;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import Automation.PageObjects.LandingPage;
@@ -25,8 +27,8 @@ public class e2e {
 
 		// Product catalog
 		ProductCatalog pc = new ProductCatalog(driver);
-		pc.GetProductsList();
-		System.out.println(pc.GetProductsList().get(1).getText());
+		List<WebElement> prod = pc.GetProductsList();
+		System.out.println(prod.get(0).getText());
 
 		driver.close();
 

@@ -25,10 +25,23 @@ public class ProductCatalog extends AbstractComponent {
 	@FindBy(id = ".mb-3")
 	List<WebElement> products;
 
+	By productsBy = By.cssSelector(".mb-3");
+
 	public List<WebElement> GetProductsList() {
 
-		WaitForTheElementToAppear(By.cssSelector(".mb-3"));
+		WaitForTheElementToAppear(productsBy);
 		return products;
+	}
+
+	public WebElement getProductByName(String productName) {
+		WebElement ourProd = products.stream()
+				.filter(s -> s.findElement(By.cssSelector("b")).getText().equalsIgnoreCase(productName)).findFirst()
+				.orElse(null);
+		return ourProd;
+	}
+
+	public void addProductToCart() {
+
 	}
 
 }
