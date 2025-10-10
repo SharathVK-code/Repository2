@@ -35,7 +35,7 @@ public class zaraCoatToCart {
 		ourProd.findElement(By.cssSelector(".mb-3 button:last-of-type")).click();
 		// Web Driver wait - explicit wait
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".toast-message"))));
+		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".toast-message"))));
 		driver.findElement(By.cssSelector(".btn-custom .fa-shopping-cart")).click();
 
 		// checkout page

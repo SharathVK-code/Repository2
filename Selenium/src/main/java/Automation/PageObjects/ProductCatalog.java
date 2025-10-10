@@ -22,11 +22,13 @@ public class ProductCatalog extends AbstractComponent {
 
 	}
 
-	@FindBy(id = ".mb-3")
+	@FindBy(css = ".mb-3")
 	List<WebElement> products;
 
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector(".mb-3 button:last-of-type");
+	By toast = By.cssSelector(".toast-message");
+	By cartButton = By.cssSelector(".btn-custom .fa-shopping-cart");
 
 	public List<WebElement> GetProductsList() {
 
@@ -44,6 +46,8 @@ public class ProductCatalog extends AbstractComponent {
 	public void addProductToCart(String productName) {
 		WebElement ourProd = getProductByName(productName);
 		ourProd.findElement(addToCart).click();
+		WaitForTheElementToDisappear(toast);
+		driver.findElement(cartButton).click();
 	}
 
 }

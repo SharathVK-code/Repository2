@@ -28,7 +28,6 @@ public class e2e {
 		// Product catalog
 		ProductCatalog pc = new ProductCatalog(driver);
 		List<WebElement> prod = pc.GetProductsList();
-//		System.out.println(prod.get(0).getText());
 		pc.addProductToCart(desiredProduct);
 
 		driver.close();
