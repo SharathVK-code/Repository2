@@ -47,8 +47,11 @@ public class e2e {
 
 		// success page
 		SuccessPage successPage = new SuccessPage(driver);
+		String cnfrmMessage = successPage.validateConfirmMessage();
+		Assert.assertEquals(cnfrmMessage, "THANKYOU FOR THE ORDER.");
+		successPage.printOrderID();
 
-//		driver.close();
+		driver.close();
 
 	}
 

@@ -36,5 +36,6 @@ public class LandingPage extends AbstractComponent {
 		userEmailAddress.sendKeys(emailAddress);
 		userPassword.sendKeys(password);
 		loginButton.click();
+		new ProductCatalog(driver);
 	}
 }

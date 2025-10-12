@@ -39,8 +39,6 @@ public class PaymentPage extends AbstractComponent {
 		WaitForTheElementToAppear(countryResultsBox);
 		requiredCountryName.click();
 		placeOrderButton.click();
-//		driver.findElement(By.cssSelector("section button:nth-child(3)")).click();
-//		driver.findElement(By.cssSelector(".action__submit")).click();
 	}
 
 }
