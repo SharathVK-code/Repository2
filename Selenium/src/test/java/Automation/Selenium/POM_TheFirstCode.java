@@ -14,7 +14,7 @@ import Automation.PageObjects.PaymentPage;
 import Automation.PageObjects.ProductCatalog;
 import Automation.PageObjects.SuccessPage;
 
-public class E2E {
+public class POM_TheFirstCode {
 
 	public static void main(String[] args) throws InterruptedException {
 
