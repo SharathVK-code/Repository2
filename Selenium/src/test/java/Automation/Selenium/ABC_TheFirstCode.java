@@ -17,7 +17,7 @@ public class ABC_TheFirstCode {
 
 		WebDriver driver = new ChromeDriver();
 		// implicit wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 
 		String desiredProduct = "ZARA COAT 3";
