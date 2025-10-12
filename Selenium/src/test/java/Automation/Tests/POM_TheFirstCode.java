@@ -1,33 +1,28 @@
 package Automation.Tests;
 
-import java.time.Duration;
+import java.io.IOException;
 import java.util.List;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import Automation.PageObjects.CheckOutPage;
 import Automation.PageObjects.LandingPage;
 import Automation.PageObjects.PaymentPage;
 import Automation.PageObjects.ProductCatalog;
 import Automation.PageObjects.SuccessPage;
+import Automation.TestComponents.BaseTest;
 
-public class POM_TheFirstCode {
+public class POM_TheFirstCode extends BaseTest {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void submitOrder() throws IOException, InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
-		// implicit wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.manage().window().maximize();
 		String desiredProduct = "ZARA COAT 3";
-
+		LandingPage landingpage = launchApplication();
 		// Landing page
-		LandingPage landingPage = new LandingPage(driver);
-		landingPage.goTo();
-		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
+		landingpage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
 		// Product catalog
 		ProductCatalog productCatalog = new ProductCatalog(driver);
