@@ -10,11 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Automation.PageObjects.CheckOutPage;
-import Automation.PageObjects.LandingPage;
-import Automation.PageObjects.PaymentPage;
-import Automation.PageObjects.ProductCatalog;
-import Automation.PageObjects.SuccessPage;
+import Automation.PageObjects.ZaraCoat3_CheckOutPage;
+import Automation.PageObjects.ZaraCoat3_LandingPage;
+import Automation.PageObjects.ZaraCoat3_PaymentPage;
+import Automation.PageObjects.ZaraCoat3_ProductCatalog;
+import Automation.PageObjects.ZaraCoat3_SuccessPage;
 
 public class ZaraCoat3_POM_Standard_e2e {
 
@@ -27,28 +27,28 @@ public class ZaraCoat3_POM_Standard_e2e {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// Landing page
-		LandingPage landingPage = new LandingPage(driver);
+		ZaraCoat3_LandingPage landingPage = new ZaraCoat3_LandingPage(driver);
 		landingPage.goTo();
 		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
 		// Product catalog
-		ProductCatalog productCatalog = new ProductCatalog(driver);
+		ZaraCoat3_ProductCatalog productCatalog = new ZaraCoat3_ProductCatalog(driver);
 		List<WebElement> prod = productCatalog.GetProductsList();
 		productCatalog.addProductToCart(desiredProduct);
 
 		// CheckOut page
-		CheckOutPage checkOutPage = new CheckOutPage(driver);
+		ZaraCoat3_CheckOutPage checkOutPage = new ZaraCoat3_CheckOutPage(driver);
 		boolean flag = checkOutPage.VerifyProductDisplay(desiredProduct);
 		Assert.assertTrue(flag);
 		Thread.sleep(2000);
 		checkOutPage.ClickOnCheckOut();
 
 		// payment page
-		PaymentPage paymentPage = new PaymentPage(driver);
+		ZaraCoat3_PaymentPage paymentPage = new ZaraCoat3_PaymentPage(driver);
 		paymentPage.EnterDetails(567, "Sharath", "India");
 
 		// success page
-		SuccessPage successPage = new SuccessPage(driver);
+		ZaraCoat3_SuccessPage successPage = new ZaraCoat3_SuccessPage(driver);
 		String cnfrmMessage = successPage.validateConfirmMessage();
 		Assert.assertEquals(cnfrmMessage, "THANKYOU FOR THE ORDER.");
 		successPage.printOrderID();
