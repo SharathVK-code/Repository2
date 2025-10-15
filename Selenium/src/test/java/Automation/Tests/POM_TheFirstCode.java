@@ -26,7 +26,9 @@ public class POM_TheFirstCode {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		LandingPage landingPage = new LandingPage(driver); // Landing page
+		// Landing page
+		LandingPage landingPage = new LandingPage(driver);
+		landingPage.goTo();
 		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
 		// Product catalog
