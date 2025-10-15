@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Standard_e2e {
+public class ZaraCoat3_Standard_e2e {
 
 //	public static void main(String[] args) throws InterruptedException {
 	@Test

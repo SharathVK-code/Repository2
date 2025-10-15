@@ -8,10 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import Automation.AbstractComponents.AbstractComponent;
 
-public class SuccessPage extends AbstractComponent {
+public class ZaraCoat3_SuccessPage extends AbstractComponent {
+
 	WebDriver driver;
 
-	public SuccessPage(WebDriver driver) {
+	public ZaraCoat3_SuccessPage(WebDriver driver) {
 
 		super(driver);
 		this.driver = driver;

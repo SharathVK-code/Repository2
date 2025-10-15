@@ -8,10 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import Automation.AbstractComponents.AbstractComponent;
 
-public class PaymentPage extends AbstractComponent {
+public class ZaraCoat3_PaymentPage extends AbstractComponent {
+
 	WebDriver driver;
 
-	public PaymentPage(WebDriver driver) {
+	public ZaraCoat3_PaymentPage(WebDriver driver) {
 
 		super(driver);
 		this.driver = driver;
@@ -32,14 +33,14 @@ public class PaymentPage extends AbstractComponent {
 
 	By countryResultsBox = By.cssSelector(".ta-results");
 
-	public SuccessPage EnterDetails(int cvvNumber, String nameOfCardHolder, String nameOfTheCountry) {
+	public ZaraCoat3_SuccessPage EnterDetails(int cvvNumber, String nameOfCardHolder, String nameOfTheCountry) {
 		cvv.sendKeys(String.valueOf(cvvNumber));
 		cardholderName.sendKeys(nameOfCardHolder);
 		countryName.sendKeys(nameOfTheCountry);
 		WaitForTheElementToAppear(countryResultsBox);
 		requiredCountryName.click();
 		placeOrderButton.click();
-		SuccessPage successPage = new SuccessPage(driver);
+		ZaraCoat3_SuccessPage successPage = new ZaraCoat3_SuccessPage(driver);
 		return successPage;
 	}
 

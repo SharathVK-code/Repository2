@@ -10,11 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import Automation.AbstractComponents.AbstractComponent;
 
-public class ProductCatalog extends AbstractComponent {
+public class ZaraCoat3_ProductCatalog extends AbstractComponent {
 
 	WebDriver driver;
 
-	public ProductCatalog(WebDriver driver) {
+	public ZaraCoat3_ProductCatalog(WebDriver driver) {
 
 		super(driver);
 		this.driver = driver;
@@ -43,12 +43,12 @@ public class ProductCatalog extends AbstractComponent {
 		return ourProd;
 	}
 
-	public CheckOutPage addProductToCart(String productName) {
+	public ZaraCoat3_CheckOutPage addProductToCart(String productName) {
 		WebElement ourProd = getProductByName(productName);
 		ourProd.findElement(addToCart).click();
 		WaitForTheElementToDisappear(toast);
 		driver.findElement(cartButton).click();
-		CheckOutPage checkOutPage = new CheckOutPage(driver);
+		ZaraCoat3_CheckOutPage checkOutPage = new ZaraCoat3_CheckOutPage(driver);
 		return checkOutPage;
 
 	}

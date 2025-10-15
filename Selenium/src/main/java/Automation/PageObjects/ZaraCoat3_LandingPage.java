@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import Automation.AbstractComponents.AbstractComponent;
 
-public class LandingPage extends AbstractComponent {
+public class ZaraCoat3_LandingPage extends AbstractComponent {
 
 	WebDriver driver;
 
-	public LandingPage(WebDriver driver) {
+	public ZaraCoat3_LandingPage(WebDriver driver) {
 
 		super(driver);
 		this.driver = driver;
@@ -32,12 +32,12 @@ public class LandingPage extends AbstractComponent {
 
 	}
 
-	public ProductCatalog loginUser(String emailAddress, String password) {
+	public ZaraCoat3_ProductCatalog loginUser(String emailAddress, String password) {
 		userEmailAddress.sendKeys(emailAddress);
 		userPassword.sendKeys(password);
 		loginButton.click();
-		new ProductCatalog(driver);
-		ProductCatalog productCatalog = new ProductCatalog(driver);
+		new ZaraCoat3_ProductCatalog(driver);
+		ZaraCoat3_ProductCatalog productCatalog = new ZaraCoat3_ProductCatalog(driver);
 		return productCatalog;
 	}
 }

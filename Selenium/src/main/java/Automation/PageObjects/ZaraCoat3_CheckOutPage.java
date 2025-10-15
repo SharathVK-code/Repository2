@@ -10,10 +10,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import Automation.AbstractComponents.AbstractComponent;
 
-public class CheckOutPage extends AbstractComponent {
+public class ZaraCoat3_CheckOutPage extends AbstractComponent {
 	WebDriver driver;
 
-	public CheckOutPage(WebDriver driver) {
+	public ZaraCoat3_CheckOutPage(WebDriver driver) {
 
 		super(driver);
 		this.driver = driver;
@@ -35,9 +35,9 @@ public class CheckOutPage extends AbstractComponent {
 		return flag;
 	}
 
-	public PaymentPage ClickOnCheckOut() {
+	public ZaraCoat3_PaymentPage ClickOnCheckOut() {
 		CheckOutButton.click();
-		PaymentPage paymentPage = new PaymentPage(driver);
+		ZaraCoat3_PaymentPage paymentPage = new ZaraCoat3_PaymentPage(driver);
 		return paymentPage;
 
 	}
