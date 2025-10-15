@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-15T23:02:51 IST" name="Default suite" finished-at="2025-10-15T23:02:59 IST" duration-ms="8197">
+  <suite started-at="2025-10-15T23:05:01 IST" name="Default suite" finished-at="2025-10-15T23:05:10 IST" duration-ms="9599">
     <groups>
     </groups>
-    <test started-at="2025-10-15T23:02:51 IST" name="Default test" finished-at="2025-10-15T23:02:59 IST" duration-ms="8197">
-      <class name="Automation.Tests.POM_Standard_e2e_Copy">
-        <test-method signature="submitOrder()[pri:0, instance:Automation.Tests.POM_Standard_e2e_Copy@55141def]" started-at="2025-10-15T23:02:51 IST" name="submitOrder" finished-at="2025-10-15T23:02:59 IST" duration-ms="8155" status="PASS">
+    <test started-at="2025-10-15T23:05:01 IST" name="Default test" finished-at="2025-10-15T23:05:10 IST" duration-ms="9599">
+      <class name="Automation.Tests.Standard_e2e">
+        <test-method signature="run()[pri:0, instance:Automation.Tests.Standard_e2e@5656be13]" started-at="2025-10-15T23:05:01 IST" name="run" finished-at="2025-10-15T23:05:10 IST" duration-ms="9547" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
-      </class> <!-- Automation.Tests.POM_Standard_e2e_Copy -->
+        </test-method> <!-- run -->
+      </class> <!-- Automation.Tests.Standard_e2e -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
