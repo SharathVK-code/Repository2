@@ -38,7 +38,7 @@ public class POM_Standard_e2e {
 
 		// CheckOut page
 		CheckOutPage checkOutPage = new CheckOutPage(driver);
-		boolean flag = checkOutPage.VerifyProducrtDisplay(desiredProduct);
+		boolean flag = checkOutPage.VerifyProductDisplay(desiredProduct);
 		Assert.assertTrue(flag);
 		Thread.sleep(2000);
 		checkOutPage.ClickOnCheckOut();
