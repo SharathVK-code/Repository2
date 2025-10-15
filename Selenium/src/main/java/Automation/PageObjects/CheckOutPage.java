@@ -29,7 +29,7 @@ public class CheckOutPage extends AbstractComponent {
 
 	By headingVisibility = By.cssSelector("h1");
 
-	public Boolean VerifyProducrtDisplay(String desiredProduct) {
+	public Boolean VerifyProductDisplay(String desiredProduct) {
 		WaitForTheElementToAppear(headingVisibility); // explicit wait applied
 		Boolean flag = cartProducts.stream().anyMatch(s -> s.getText().equalsIgnoreCase(desiredProduct));
 		return flag;

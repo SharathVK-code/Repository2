@@ -33,7 +33,7 @@ public class POM_Standard_e2e_Copy {
 		List<WebElement> prod = productCatalog.GetProductsList();
 		// CheckOut page
 		CheckOutPage checkOutPage = productCatalog.addProductToCart(desiredProduct);
-		boolean flag = checkOutPage.VerifyProducrtDisplay(desiredProduct);
+		boolean flag = checkOutPage.VerifyProductDisplay(desiredProduct);
 		Assert.assertTrue(flag);
 		Thread.sleep(2000);
 		// payment page
