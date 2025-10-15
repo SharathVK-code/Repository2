@@ -1,9 +1,12 @@
 package Automation.Tests;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,17 +15,19 @@ import Automation.PageObjects.LandingPage;
 import Automation.PageObjects.PaymentPage;
 import Automation.PageObjects.ProductCatalog;
 import Automation.PageObjects.SuccessPage;
-import Automation.TestComponents.BaseTest;
 
-public class POM_TheFirstCode extends BaseTest {
+public class POM_TheFirstCode {
 
 	@Test
 	public void submitOrder() throws IOException, InterruptedException {
 
 		String desiredProduct = "ZARA COAT 3";
-		LandingPage landingpage = launchApplication();
-		// Landing page
-		landingpage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		LandingPage landingPage = new LandingPage(driver); // Landing page
+		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 
 		// Product catalog
 		ProductCatalog productCatalog = new ProductCatalog(driver);
