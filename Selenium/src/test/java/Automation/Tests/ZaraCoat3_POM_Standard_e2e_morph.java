@@ -16,7 +16,7 @@ import Automation.PageObjects.ZaraCoat3_PaymentPage;
 import Automation.PageObjects.ZaraCoat3_ProductCatalog;
 import Automation.PageObjects.ZaraCoat3_SuccessPage;
 
-public class ZaraCoat3_POM_Standard_e2e_Copy {
+public class ZaraCoat3_POM_Standard_e2e_morph {
 
 	@Test
 	public void submitOrder() throws IOException, InterruptedException {
