@@ -25,34 +25,24 @@ public class POM_Standard_e2e_Copy {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
 		// Landing page
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.goTo();
-		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
-
 		// Product catalog
-		ProductCatalog productCatalog = new ProductCatalog(driver);
+		ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 		List<WebElement> prod = productCatalog.GetProductsList();
-		productCatalog.addProductToCart(desiredProduct);
-
 		// CheckOut page
-		CheckOutPage checkOutPage = new CheckOutPage(driver);
+		CheckOutPage checkOutPage = productCatalog.addProductToCart(desiredProduct);
 		boolean flag = checkOutPage.VerifyProducrtDisplay(desiredProduct);
 		Assert.assertTrue(flag);
 		Thread.sleep(2000);
-		checkOutPage.ClickOnCheckOut();
-
 		// payment page
-		PaymentPage paymentPage = new PaymentPage(driver);
-		paymentPage.EnterDetails(567, "Sharath", "India");
-
+		PaymentPage paymentPage = checkOutPage.ClickOnCheckOut();
 		// success page
-		SuccessPage successPage = new SuccessPage(driver);
+		SuccessPage successPage = paymentPage.EnterDetails(567, "Sharath", "India");
 		String cnfrmMessage = successPage.validateConfirmMessage();
 		Assert.assertEquals(cnfrmMessage, "THANKYOU FOR THE ORDER.");
 		successPage.printOrderID();
-
 		driver.close();
 
 	}

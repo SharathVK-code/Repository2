@@ -32,13 +32,15 @@ public class PaymentPage extends AbstractComponent {
 
 	By countryResultsBox = By.cssSelector(".ta-results");
 
-	public void EnterDetails(int cvvNumber, String nameOfCardHolder, String nameOfTheCountry) {
+	public SuccessPage EnterDetails(int cvvNumber, String nameOfCardHolder, String nameOfTheCountry) {
 		cvv.sendKeys(String.valueOf(cvvNumber));
 		cardholderName.sendKeys(nameOfCardHolder);
 		countryName.sendKeys(nameOfTheCountry);
 		WaitForTheElementToAppear(countryResultsBox);
 		requiredCountryName.click();
 		placeOrderButton.click();
+		SuccessPage successPage = new SuccessPage(driver);
+		return successPage;
 	}
 
 }

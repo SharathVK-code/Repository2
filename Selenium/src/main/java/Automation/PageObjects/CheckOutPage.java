@@ -35,8 +35,10 @@ public class CheckOutPage extends AbstractComponent {
 		return flag;
 	}
 
-	public void ClickOnCheckOut() {
+	public PaymentPage ClickOnCheckOut() {
 		CheckOutButton.click();
+		PaymentPage paymentPage = new PaymentPage(driver);
+		return paymentPage;
 
 	}
 

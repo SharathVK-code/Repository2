@@ -43,11 +43,14 @@ public class ProductCatalog extends AbstractComponent {
 		return ourProd;
 	}
 
-	public void addProductToCart(String productName) {
+	public CheckOutPage addProductToCart(String productName) {
 		WebElement ourProd = getProductByName(productName);
 		ourProd.findElement(addToCart).click();
 		WaitForTheElementToDisappear(toast);
 		driver.findElement(cartButton).click();
+		CheckOutPage checkOutPage = new CheckOutPage(driver);
+		return checkOutPage;
+
 	}
 
 }
