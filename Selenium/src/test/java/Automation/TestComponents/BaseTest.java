@@ -8,16 +8,18 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Automation.PageObjects.ZaraCoat3_LandingPage;
+
 public class BaseTest {
 	WebDriver driver;
 
-	public void initializeBrowser() throws IOException {
+	public WebDriver initializeBrowser() throws IOException {
 
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\ambat\\git\\repository2\\Selenium\\src\\main\\resources\\GlobalData.Properties");
+				System.getProperty("user.dir") + "\\src\\main\\resources\\GlobalData.Properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("Browser");
+		String browserName = prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
@@ -31,6 +33,16 @@ public class BaseTest {
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		return driver;
+
+	}
+
+	public ZaraCoat3_LandingPage launchApplication() throws IOException {
+		driver = initializeBrowser();
+		ZaraCoat3_LandingPage landingPage = new ZaraCoat3_LandingPage(driver);
+		landingPage.goTo();
+		return landingPage;
 
 	}
 

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Automation.Tests.POM_TheFirstCode">
+      <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
         <methods>
           <include name="submitOrder"/>
         </methods>
-      </class> <!-- Automation.Tests.POM_TheFirstCode -->
+      </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

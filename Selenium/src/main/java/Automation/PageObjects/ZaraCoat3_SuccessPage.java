@@ -36,6 +36,7 @@ public class ZaraCoat3_SuccessPage extends AbstractComponent {
 	public void printOrderID() {
 		String orderID = totalOrderID.getText().split(" ")[1].split(" ")[0];
 		System.out.println("your Order ID is:" + orderID);
+//		driver.close();
 
 	}
 

@@ -1,12 +1,10 @@
 package Automation.Tests;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,19 +13,16 @@ import Automation.PageObjects.ZaraCoat3_LandingPage;
 import Automation.PageObjects.ZaraCoat3_PaymentPage;
 import Automation.PageObjects.ZaraCoat3_ProductCatalog;
 import Automation.PageObjects.ZaraCoat3_SuccessPage;
+import Automation.TestComponents.BaseTest;
 
-public class ZaraCoat3_POM_Standard_e2e_morph {
+public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 
 	@Test
 	public void submitOrder() throws IOException, InterruptedException {
+		WebDriver driver = initializeBrowser();
 
 		String desiredProduct = "ZARA COAT 3";
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		// Landing page
-		ZaraCoat3_LandingPage landingPage = new ZaraCoat3_LandingPage(driver);
-		landingPage.goTo();
+		ZaraCoat3_LandingPage landingPage = launchApplication();
 		// Product catalog
 		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 		List<WebElement> prod = productCatalog.GetProductsList();
