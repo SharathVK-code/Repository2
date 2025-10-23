@@ -23,7 +23,7 @@ public class ZaraCoat3_Standard_e2e {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 
-		String desiredProduct = "ZARA COAT 3";
+		String desiredProduct = "ADIDAS ORIGINAL";
 		// Login Page
 		driver.get("https://rahulshettyacademy.com/client");
 		driver.findElement(By.id("userEmail")).sendKeys("ambati.sharath500@gmail.com");
