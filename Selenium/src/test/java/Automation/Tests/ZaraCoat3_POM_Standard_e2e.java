@@ -21,7 +21,7 @@ public class ZaraCoat3_POM_Standard_e2e {
 	@Test
 	public void submitOrder() throws IOException, InterruptedException {
 
-		String desiredProduct = "ZARA COAT 3";
+		String desiredProduct = "iphone 13 pro";
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
