@@ -25,11 +25,11 @@ public class ZaraCoat3_LandingPage extends AbstractComponent {
 	WebElement userPassword;
 	@FindBy(id = "login")
 	WebElement loginButton;
+	@FindBy(css = "#toast-container")
+	WebElement ErrorMessage;
 
 	public void goTo() {
-
 		driver.get("https://rahulshettyacademy.com/client");
-
 	}
 
 	public ZaraCoat3_ProductCatalog loginUser(String emailAddress, String password) {
@@ -39,5 +39,10 @@ public class ZaraCoat3_LandingPage extends AbstractComponent {
 		new ZaraCoat3_ProductCatalog(driver);
 		ZaraCoat3_ProductCatalog productCatalog = new ZaraCoat3_ProductCatalog(driver);
 		return productCatalog;
+	}
+
+	public String getErrorMessage() {
+		WaitForTheWebElementToAppear(ErrorMessage);
+		return ErrorMessage.getText();
 	}
 }
