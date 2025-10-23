@@ -21,7 +21,7 @@ public class BaseTest {
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 
-		if (browserName.equalsIgnoreCase("Chrome")) {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 
 		} else if (browserName.equalsIgnoreCase("FireFox")) {
