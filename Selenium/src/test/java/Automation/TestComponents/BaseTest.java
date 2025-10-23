@@ -7,11 +7,14 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import Automation.PageObjects.ZaraCoat3_LandingPage;
 
 public class BaseTest {
 	WebDriver driver;
+	public ZaraCoat3_LandingPage landingPage;
 
 	public WebDriver initializeBrowser() throws IOException {
 
@@ -38,12 +41,18 @@ public class BaseTest {
 
 	}
 
+	@BeforeMethod
 	public ZaraCoat3_LandingPage launchApplication() throws IOException {
 		driver = initializeBrowser();
-		ZaraCoat3_LandingPage landingPage = new ZaraCoat3_LandingPage(driver);
+		landingPage = new ZaraCoat3_LandingPage(driver);
 		landingPage.goTo();
 		return landingPage;
 
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.close();
 	}
 
 }
