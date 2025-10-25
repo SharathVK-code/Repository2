@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-25T11:36:10 IST" name="Suite" finished-at="2025-10-25T11:36:13 IST" duration-ms="3228">
+  <suite started-at="2025-10-25T11:53:00 IST" name="Suite" finished-at="2025-10-25T11:53:03 IST" duration-ms="3433">
     <groups>
       <group name="errorHandling">
-        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@3d34d211]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
+        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
       </group> <!-- errorHandling -->
     </groups>
-    <test started-at="2025-10-25T11:36:10 IST" name="submit Order" finished-at="2025-10-25T11:36:10 IST" duration-ms="12">
-    </test> <!-- submit Order -->
-    <test started-at="2025-10-25T11:36:10 IST" name="Error Validations" finished-at="2025-10-25T11:36:13 IST" duration-ms="3132">
+    <test started-at="2025-10-25T11:53:00 IST" name="Error Validations" finished-at="2025-10-25T11:53:03 IST" duration-ms="3433">
       <class name="Automation.Tests.ErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@3d34d211]" started-at="2025-10-25T11:36:10 IST" name="launchApplication" finished-at="2025-10-25T11:36:12 IST" duration-ms="2508" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" started-at="2025-10-25T11:53:00 IST" name="launchApplication" finished-at="2025-10-25T11:53:02 IST" duration-ms="2666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@3d34d211]" started-at="2025-10-25T11:36:12 IST" name="LoginErrorValidation" finished-at="2025-10-25T11:36:13 IST" duration-ms="452" status="PASS">
+        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" started-at="2025-10-25T11:53:02 IST" name="LoginErrorValidation" finished-at="2025-10-25T11:53:03 IST" duration-ms="533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@3d34d211]" started-at="2025-10-25T11:36:13 IST" name="tearDown" finished-at="2025-10-25T11:36:13 IST" duration-ms="134" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" started-at="2025-10-25T11:53:03 IST" name="tearDown" finished-at="2025-10-25T11:53:03 IST" duration-ms="194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

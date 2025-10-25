@@ -7,14 +7,6 @@
 		</run>
 	</groups>
 	
-	<test thread-count="5" name="submit Order">
-		<classes>
-
-			<class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph" />
-
-		</classes>
-	</test> 
-	
 	<test thread-count="5" name="Error Validations">
 		<classes>
 
