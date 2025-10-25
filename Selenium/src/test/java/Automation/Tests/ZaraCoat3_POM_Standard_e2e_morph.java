@@ -62,7 +62,7 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 		map1.put("password", "SharathVK@18");
 		map1.put("product", "ZARA COAT 3");
 
-		return new Object[][] { { "map" }, { "map1" } };
+		return new Object[][] { { map }, { map1 } };
 
 	}
 
