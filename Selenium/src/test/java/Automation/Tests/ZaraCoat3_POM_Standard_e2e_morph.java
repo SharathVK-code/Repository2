@@ -66,4 +66,12 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 
 	}
 
+//	@DataProvider
+//	public Object[][] getData() {
+//
+//		return new Object[][] { { "ambati.sharath500@gmail.com", "SharathVK@18", "ADIDAS ORIGINAL" },
+//				{ "ambatisarachandra@gmail.com", "SharathVK@18", "ZARA COAT 3" } };
+//
+//	}
+
 }
