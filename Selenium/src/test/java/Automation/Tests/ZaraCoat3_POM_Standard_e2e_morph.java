@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Automation.PageObjects.OrdersPage;
 import Automation.PageObjects.ZaraCoat3_CheckOutPage;
 import Automation.PageObjects.ZaraCoat3_PaymentPage;
 import Automation.PageObjects.ZaraCoat3_ProductCatalog;
@@ -14,11 +15,11 @@ import Automation.PageObjects.ZaraCoat3_SuccessPage;
 import Automation.TestComponents.BaseTest;
 
 public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
+	String desiredProduct = "ADIDAS ORIGINAL";
 
 	@Test
 	public void submitOrder() throws IOException, InterruptedException {
 
-		String desiredProduct = "ZARA COAT 3";
 		// Product catalog
 		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
 		List<WebElement> prod = productCatalog.GetProductsList();
@@ -37,10 +38,12 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 
 	}
 
-	@Test
+	@Test(dependsOnMethods = { "submitOrder" })
 	public void OrderHistoryTest() {
 		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
-		productCatalog.ClickOnOrdersButton();
+		OrdersPage ordersPage = productCatalog.ClickOnOrdersButton();
+		Assert.assertTrue(ordersPage.VerifyOrderDisplay(desiredProduct));
+
 	}
 
 }

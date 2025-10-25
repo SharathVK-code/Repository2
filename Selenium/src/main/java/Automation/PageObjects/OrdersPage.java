@@ -2,7 +2,6 @@ package Automation.PageObjects;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +12,7 @@ import Automation.AbstractComponents.AbstractComponent;
 public class OrdersPage extends AbstractComponent {
 	WebDriver driver;
 
-	public ZaraCoat3_CheckOutPage(WebDriver driver) {
+	public OrdersPage(WebDriver driver) {
 
 		super(driver);
 		this.driver = driver;
@@ -21,25 +20,12 @@ public class OrdersPage extends AbstractComponent {
 
 	}
 
-	@FindBy(css = ".cartSection h3")
-	List<WebElement> cartProducts;
+	@FindBy(css = "tr td:nth-child(3)")
+	List<WebElement> OrderProducts;
 
-	@FindBy(css = "li[class='totalRow'] button")
-	WebElement CheckOutButton;
-
-	By headingVisibility = By.cssSelector("h1");
-
-	public Boolean VerifyProductDisplay(String desiredProduct) {
-		WaitForTheElementToAppear(headingVisibility); // explicit wait applied
-		Boolean flag = cartProducts.stream().anyMatch(s -> s.getText().equalsIgnoreCase(desiredProduct));
+	public Boolean VerifyOrderDisplay(String desiredProduct) {
+		Boolean flag = OrderProducts.stream().anyMatch(s -> s.getText().equalsIgnoreCase(desiredProduct));
 		return flag;
-	}
-
-	public ZaraCoat3_PaymentPage ClickOnCheckOut() {
-		CheckOutButton.click();
-		ZaraCoat3_PaymentPage paymentPage = new ZaraCoat3_PaymentPage(driver);
-		return paymentPage;
-
 	}
 
 }

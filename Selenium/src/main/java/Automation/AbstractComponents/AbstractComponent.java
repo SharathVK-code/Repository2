@@ -9,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Automation.PageObjects.OrdersPage;
+
 public class AbstractComponent {
 
 	WebDriver driver;
@@ -29,9 +31,10 @@ public class AbstractComponent {
 		HomeButton.click();
 	}
 
-	public void ClickOnOrdersButton() {
+	public OrdersPage ClickOnOrdersButton() {
 		OrdersButton.click();
 		OrdersPage ordersPage = new OrdersPage(driver);
+		return ordersPage;
 	}
 
 	public void ClickOnCartButton() {
