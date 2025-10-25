@@ -5,6 +5,9 @@
     <classes>
       <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
         <methods>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+          <include name="OrderHistoryTest" invocation-numbers="1"/>
           <include name="submitOrder"/>
         </methods>
       </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
