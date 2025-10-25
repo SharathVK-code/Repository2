@@ -50,22 +50,30 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 	}
 
 	@DataProvider
-	public Object[][] getData() {
-
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("email", "ambati.sharath500@gmail.com");
-		map.put("password", "SharathVK@18");
-		map.put("product", "ADIDAS ORIGINAL");
-
-		HashMap<String, String> map1 = new HashMap<String, String>();
-		map1.put("email", "ambatisarachandra@gmail.com");
-		map1.put("password", "SharathVK@18");
-		map1.put("product", "ZARA COAT 3");
-
-		return new Object[][] { { map }, { map1 } };
+	public Object[][] getData() throws IOException {
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				System.getProperty("user.dir") + "\\src\\test\\java\\Automation\\data\\PurchaseOrder.json");
+		return new Object[][] { { data.get(0) }, { data.get(1) } };
 
 	}
 
+//	@DataProvider
+//	public Object[][] getData() {
+//
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		map.put("email", "ambati.sharath500@gmail.com");
+//		map.put("password", "SharathVK@18");
+//		map.put("product", "ADIDAS ORIGINAL");
+//
+//		HashMap<String, String> map1 = new HashMap<String, String>();
+//		map1.put("email", "ambatisarachandra@gmail.com");
+//		map1.put("password", "SharathVK@18");
+//		map1.put("product", "ZARA COAT 3");
+//
+//		return new Object[][] { { map }, { map1 } };
+//
+//	}
+//
 //	@DataProvider
 //	public Object[][] getData() {
 //
