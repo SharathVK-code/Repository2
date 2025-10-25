@@ -11,8 +11,8 @@ import Automation.TestComponents.BaseTest;
 
 public class ErrorValidations extends BaseTest {
 
-	@Test(groups = "{errorHandling}")
-	public void submitOrder() throws IOException, InterruptedException {
+	@Test(groups = { "errorHandling" })
+	public void LoginErrorValidation() throws IOException, InterruptedException {
 
 		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18@18");
 		Assert.assertEquals("Incorrect email or password.", landingPage.getErrorMessage());
