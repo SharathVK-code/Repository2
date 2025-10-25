@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,6 +16,25 @@ public class AbstractComponent {
 	public AbstractComponent(WebDriver driver) {
 
 		this.driver = driver;
+	}
+
+	@FindBy(css = "button[routerlink='/dashboard/']")
+	WebElement HomeButton;
+	@FindBy(css = "button[routerlink='/dashboard/myorders']")
+	WebElement OrdersButton;
+	@FindBy(css = "button[routerlink='/dashboard/cart']")
+	WebElement CartButton;
+
+	public void ClickOnHomeButton() {
+		HomeButton.click();
+	}
+
+	public void ClickOnOrdersButton() {
+		OrdersButton.click();
+	}
+
+	public void ClickOnCartButton() {
+		CartButton.click();
 	}
 
 	public void WaitForTheElementToAppear(By FindBy) {

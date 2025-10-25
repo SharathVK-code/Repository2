@@ -37,4 +37,10 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 
 	}
 
+	@Test
+	public void OrderHistoryTest() {
+		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
+		productCatalog.ClickOnOrdersButton();
+	}
+
 }
