@@ -47,7 +47,7 @@ public class ZaraCoat3_ProductCatalog extends AbstractComponent {
 		WebElement ourProd = getProductByName(productName);
 		ourProd.findElement(addToCart).click();
 //		WaitForTheElementToDisappear(toast);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		driver.findElement(cartButton).click();
 		ZaraCoat3_CheckOutPage checkOutPage = new ZaraCoat3_CheckOutPage(driver);
 		return checkOutPage;

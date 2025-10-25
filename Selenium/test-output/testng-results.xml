@@ -2,27 +2,24 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-25T12:49:05 IST" name="Suite" finished-at="2025-10-25T12:49:09 IST" duration-ms="4005">
+  <suite started-at="2025-10-25T13:10:51 IST" name="Default suite" finished-at="2025-10-25T13:10:59 IST" duration-ms="8103">
     <groups>
-      <group name="errorHandling">
-        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
-      </group> <!-- errorHandling -->
     </groups>
-    <test started-at="2025-10-25T12:49:05 IST" name="Error Validations" finished-at="2025-10-25T12:49:09 IST" duration-ms="4005">
-      <class name="Automation.Tests.ErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" started-at="2025-10-25T12:49:05 IST" name="launchApplication" finished-at="2025-10-25T12:49:08 IST" duration-ms="3208" status="PASS">
+    <test started-at="2025-10-25T13:10:51 IST" name="Default test" finished-at="2025-10-25T13:10:59 IST" duration-ms="8103">
+      <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@62379589]" started-at="2025-10-25T13:10:51 IST" name="launchApplication" finished-at="2025-10-25T13:10:54 IST" duration-ms="2909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" started-at="2025-10-25T12:49:08 IST" name="LoginErrorValidation" finished-at="2025-10-25T12:49:09 IST" duration-ms="544" status="PASS">
+        <test-method signature="submitOrder()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@62379589]" started-at="2025-10-25T13:10:54 IST" name="submitOrder" finished-at="2025-10-25T13:10:59 IST" duration-ms="5053" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@5bf0d49]" started-at="2025-10-25T12:49:09 IST" name="tearDown" finished-at="2025-10-25T12:49:09 IST" duration-ms="194" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@62379589]" started-at="2025-10-25T13:10:59 IST" name="tearDown" finished-at="2025-10-25T13:10:59 IST" duration-ms="92" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Automation.Tests.ErrorValidations -->
-    </test> <!-- Error Validations -->
-  </suite> <!-- Suite -->
+      </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
