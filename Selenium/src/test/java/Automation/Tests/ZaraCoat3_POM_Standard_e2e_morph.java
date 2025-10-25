@@ -18,12 +18,12 @@ import Automation.TestComponents.BaseTest;
 public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 //	String desiredProduct = "ADIDAS ORIGINAL";
 
-	@Test(dataProvider = "getData", groups = "purchase")
+	@Test(dataProvider = "getData", groups = { "purchase" })
 	public void submitOrder(String email, String password, String productName)
 			throws IOException, InterruptedException {
 
 		// Product catalog
-		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
+		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser(email, password);
 		List<WebElement> prod = productCatalog.GetProductsList();
 		// CheckOut page
 		ZaraCoat3_CheckOutPage checkOutPage = productCatalog.addProductToCart(productName);
