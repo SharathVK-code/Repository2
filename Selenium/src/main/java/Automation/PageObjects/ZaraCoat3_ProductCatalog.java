@@ -43,10 +43,11 @@ public class ZaraCoat3_ProductCatalog extends AbstractComponent {
 		return ourProd;
 	}
 
-	public ZaraCoat3_CheckOutPage addProductToCart(String productName) {
+	public ZaraCoat3_CheckOutPage addProductToCart(String productName) throws InterruptedException {
 		WebElement ourProd = getProductByName(productName);
 		ourProd.findElement(addToCart).click();
-		WaitForTheElementToDisappear(toast);
+//		WaitForTheElementToDisappear(toast);
+		Thread.sleep(1000);
 		driver.findElement(cartButton).click();
 		ZaraCoat3_CheckOutPage checkOutPage = new ZaraCoat3_CheckOutPage(driver);
 		return checkOutPage;
