@@ -41,7 +41,7 @@ public class BaseTest {
 
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public ZaraCoat3_LandingPage launchApplication() throws IOException {
 		driver = initializeBrowser();
 		landingPage = new ZaraCoat3_LandingPage(driver);
@@ -50,7 +50,7 @@ public class BaseTest {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.close();
 	}

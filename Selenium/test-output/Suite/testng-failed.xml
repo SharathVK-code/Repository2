@@ -10,7 +10,7 @@
     <classes>
       <class name="Automation.Tests.ErrorValidations">
         <methods>
-          <include name="submitOrder"/>
+          <include name="LoginErrorValidation"/>
         </methods>
       </class> <!-- Automation.Tests.ErrorValidations -->
     </classes>

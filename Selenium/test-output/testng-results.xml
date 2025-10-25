@@ -2,24 +2,24 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-25T11:27:51 IST" name="Suite" finished-at="2025-10-25T11:27:51 IST" duration-ms="177">
+  <suite started-at="2025-10-25T11:29:35 IST" name="Suite" finished-at="2025-10-25T11:29:35 IST" duration-ms="134">
     <groups>
       <group name="errorHandling">
-        <method signature="ErrorValidations.submitOrder()[pri:0, instance:Automation.Tests.ErrorValidations@2a5c8d3f]" name="submitOrder" class="Automation.Tests.ErrorValidations"/>
+        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@752325ad]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
       </group> <!-- errorHandling -->
     </groups>
-    <test started-at="2025-10-25T11:27:51 IST" name="submit Order" finished-at="2025-10-25T11:27:51 IST" duration-ms="10">
+    <test started-at="2025-10-25T11:29:35 IST" name="submit Order" finished-at="2025-10-25T11:29:35 IST" duration-ms="9">
     </test> <!-- submit Order -->
-    <test started-at="2025-10-25T11:27:51 IST" name="Error Validations" finished-at="2025-10-25T11:27:51 IST" duration-ms="95">
+    <test started-at="2025-10-25T11:29:35 IST" name="Error Validations" finished-at="2025-10-25T11:29:35 IST" duration-ms="62">
       <class name="Automation.Tests.ErrorValidations">
-        <test-method signature="submitOrder()[pri:0, instance:Automation.Tests.ErrorValidations@2a5c8d3f]" started-at="2025-10-25T11:27:51 IST" name="submitOrder" finished-at="2025-10-25T11:27:51 IST" duration-ms="26" status="FAIL">
+        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@752325ad]" started-at="2025-10-25T11:29:35 IST" name="LoginErrorValidation" finished-at="2025-10-25T11:29:35 IST" duration-ms="10" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "Automation.PageObjects.ZaraCoat3_LandingPage.loginUser(String, String)" because "this.landingPage" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "Automation.PageObjects.ZaraCoat3_LandingPage.loginUser(String, String)" because "this.landingPage" is null
-at Automation.Tests.ErrorValidations.submitOrder(ErrorValidations.java:17)
+at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:17)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -51,7 +51,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
+        </test-method> <!-- LoginErrorValidation -->
       </class> <!-- Automation.Tests.ErrorValidations -->
     </test> <!-- Error Validations -->
   </suite> <!-- Suite -->
