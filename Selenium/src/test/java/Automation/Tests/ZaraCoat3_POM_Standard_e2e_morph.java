@@ -1,6 +1,7 @@
 package Automation.Tests;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -19,15 +20,14 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 //	String desiredProduct = "ADIDAS ORIGINAL";
 
 	@Test(dataProvider = "getData", groups = { "purchase" })
-	public void submitOrder(String email, String password, String productName)
-			throws IOException, InterruptedException {
+	public void submitOrder(HashMap<String, String> input) throws IOException, InterruptedException {
 
 		// Product catalog
-		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser(email, password);
+		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser(input.get("email"), input.get("password"));
 		List<WebElement> prod = productCatalog.GetProductsList();
 		// CheckOut page
-		ZaraCoat3_CheckOutPage checkOutPage = productCatalog.addProductToCart(productName);
-		boolean flag = checkOutPage.VerifyProductDisplay(productName);
+		ZaraCoat3_CheckOutPage checkOutPage = productCatalog.addProductToCart(input.get("product"));
+		boolean flag = checkOutPage.VerifyProductDisplay(input.get("product"));
 		Assert.assertTrue(flag);
 		Thread.sleep(2000);
 		// payment page
@@ -51,10 +51,18 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 
 	@DataProvider
 	public Object[][] getData() {
-		return new Object[][] { { "ambati.sharath500@gmail.com", "SharathVK@18", "ADIDAS ORIGINAL" },
-				{ "ambatisarachandra@gmail.com", "SharathVK@18", "ZARA COAT 3" }
 
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("email", "ambati.sharath500@gmail.com");
+		map.put("password", "SharathVK@18");
+		map.put("product", "ADIDAS ORIGINAL");
+
+		HashMap<String, String> map1 = new HashMap<String, String>();
+		map1.put("email", "ambatisarachandra@gmail.com");
+		map1.put("password", "SharathVK@18");
+		map1.put("product", "ZARA COAT 3");
+
+		return new Object[][] { { "map" }, { "map1" } };
 
 	}
 
