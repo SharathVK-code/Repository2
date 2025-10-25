@@ -31,6 +31,7 @@ public class AbstractComponent {
 
 	public void ClickOnOrdersButton() {
 		OrdersButton.click();
+		OrdersPage ordersPage = new OrdersPage(driver);
 	}
 
 	public void ClickOnCartButton() {
