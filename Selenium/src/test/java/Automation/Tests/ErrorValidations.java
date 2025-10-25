@@ -1,10 +1,8 @@
 package Automation.Tests;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import Automation.PageObjects.ZaraCoat3_CheckOutPage;
@@ -13,7 +11,7 @@ import Automation.TestComponents.BaseTest;
 
 public class ErrorValidations extends BaseTest {
 
-	@Test
+	@Test(groups = "{errorHandling}")
 	public void submitOrder() throws IOException, InterruptedException {
 
 		landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18@18");
@@ -27,7 +25,7 @@ public class ErrorValidations extends BaseTest {
 		String desiredProduct = "ZARA COAT 3";
 		// Product catalog
 		ZaraCoat3_ProductCatalog productCatalog = landingPage.loginUser("ambati.sharath500@gmail.com", "SharathVK@18");
-		List<WebElement> prod = productCatalog.GetProductsList();
+		productCatalog.GetProductsList();
 		// CheckOut page
 		ZaraCoat3_CheckOutPage checkOutPage = productCatalog.addProductToCart(desiredProduct);
 		boolean flag = checkOutPage.VerifyProductDisplay("ZARA COAT 33");
