@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -47,6 +48,10 @@ public class ZaraCoat3_POM_Standard_e2e_morph extends BaseTest {
 		OrdersPage ordersPage = productCatalog.ClickOnOrdersButton();
 		Assert.assertTrue(ordersPage.VerifyOrderDisplay(desiredProduct));
 
+	}
+
+	public void getScreenShot() {
+		TakesScreenshot ts = (TakesScreenshot) driver;
 	}
 
 	@DataProvider

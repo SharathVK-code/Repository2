@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import Automation.PageObjects.ZaraCoat3_LandingPage;
 
 public class BaseTest {
-	WebDriver driver;
+	public WebDriver driver;
 	public ZaraCoat3_LandingPage landingPage;
 
 	public WebDriver initializeBrowser() throws IOException {

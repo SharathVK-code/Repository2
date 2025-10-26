@@ -2,19 +2,19 @@
 <testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-25T17:34:14 IST" name="Suite" finished-at="2025-10-25T17:34:33 IST" duration-ms="18766">
+  <suite started-at="2025-10-26T10:16:43 IST" name="Suite" finished-at="2025-10-26T10:17:05 IST" duration-ms="22085">
     <groups>
       <group name="purchase">
-        <method signature="ZaraCoat3_POM_Standard_e2e_morph.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" name="submitOrder" class="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph"/>
+        <method signature="ZaraCoat3_POM_Standard_e2e_morph.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" name="submitOrder" class="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph"/>
       </group> <!-- purchase -->
     </groups>
-    <test started-at="2025-10-25T17:34:14 IST" name="submit Order" finished-at="2025-10-25T17:34:33 IST" duration-ms="18663">
+    <test started-at="2025-10-26T10:16:43 IST" name="submit Order" finished-at="2025-10-26T10:17:05 IST" duration-ms="21984">
       <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" started-at="2025-10-25T17:34:14 IST" name="launchApplication" finished-at="2025-10-25T17:34:18 IST" duration-ms="3486" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" started-at="2025-10-26T10:16:43 IST" name="launchApplication" finished-at="2025-10-26T10:16:48 IST" duration-ms="4931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" started-at="2025-10-25T17:34:18 IST" name="submitOrder" data-provider="getData" finished-at="2025-10-25T17:34:24 IST" duration-ms="6361" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" started-at="2025-10-26T10:16:48 IST" name="submitOrder" data-provider="getData" finished-at="2025-10-26T10:16:54 IST" duration-ms="6299" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,15 +25,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" started-at="2025-10-25T17:34:24 IST" name="tearDown" finished-at="2025-10-25T17:34:24 IST" duration-ms="91" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" started-at="2025-10-26T10:16:54 IST" name="tearDown" finished-at="2025-10-26T10:16:55 IST" duration-ms="324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" started-at="2025-10-25T17:34:24 IST" name="launchApplication" finished-at="2025-10-25T17:34:27 IST" duration-ms="2704" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" started-at="2025-10-26T10:16:55 IST" name="launchApplication" finished-at="2025-10-26T10:16:58 IST" duration-ms="3243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" started-at="2025-10-25T17:34:27 IST" name="submitOrder" data-provider="getData" finished-at="2025-10-25T17:34:33 IST" duration-ms="5849" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" started-at="2025-10-26T10:16:58 IST" name="submitOrder" data-provider="getData" finished-at="2025-10-26T10:17:04 IST" duration-ms="6539" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,13 +44,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@6150c3ec]" started-at="2025-10-25T17:34:33 IST" name="tearDown" finished-at="2025-10-25T17:34:33 IST" duration-ms="107" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@10683d9d]" started-at="2025-10-26T10:17:04 IST" name="tearDown" finished-at="2025-10-26T10:17:05 IST" duration-ms="200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
     </test> <!-- submit Order -->
-    <test started-at="2025-10-25T17:34:33 IST" name="Error Validations" finished-at="2025-10-25T17:34:33 IST" duration-ms="2">
+    <test started-at="2025-10-26T10:17:05 IST" name="Error Validations" finished-at="2025-10-26T10:17:05 IST" duration-ms="3">
     </test> <!-- Error Validations -->
   </suite> <!-- Suite -->
 </testng-results>
