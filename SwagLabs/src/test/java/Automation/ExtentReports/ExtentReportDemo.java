@@ -33,6 +33,7 @@ public class ExtentReportDemo {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com");
 		System.out.println(driver.getTitle());
+		driver.close();
 		extent.flush();
 
 	}
