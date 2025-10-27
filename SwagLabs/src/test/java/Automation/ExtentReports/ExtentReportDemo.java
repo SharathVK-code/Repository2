@@ -1,25 +1,26 @@
 package Automation.ExtentReports;
 
-import java.time.Duration;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class ExtentReportDemo {
 
-	public static void main(String[] args) throws InterruptedException {
+	@BeforeTest
+	public void config() {
+		// ExtentReports, ExtentSparkReporter
+		
+		
+	}
+	
+	
+	@Test
+	public void initialDemo() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.saucedemo.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.manage().window().maximize();
-
-		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		driver.findElement(By.id("login-button")).click();
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept();
+		driver.get("https://www.flipkart.com");
+		System.out.println(driver.getTitle());
 
 	}
 
