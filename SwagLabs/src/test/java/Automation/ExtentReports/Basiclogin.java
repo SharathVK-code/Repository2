@@ -1,4 +1,4 @@
-package Automation.SwagLabs;
+package Automation.ExtentReports;
 
 import java.time.Duration;
 
