@@ -9,29 +9,31 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReportDemo {
+	ExtentReports extent;
 
 	@BeforeTest
 	public void config() {
 		// ExtentReports, ExtentSparkReporter
-		String path = System.getProperty("user.dir")+"\\reports\\index.html";
+		String path = System.getProperty("user.dir") + "\\reports\\index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		reporter.config().setReportName("Report_reportName");
 		reporter.config().setDocumentTitle("Report_Doc_Title");
-		
-		ExtentReports extent = new ExtentReports();
+
+		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Tester", "Sharath");
-		
-		
+		extent.setSystemInfo("Org", "TCS");
+
 	}
-	
-	
+
 	@Test
 	public void initialDemo() throws InterruptedException {
 
+		extent.createTest("Initial Demo");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com");
 		System.out.println(driver.getTitle());
+		extent.flush();
 
 	}
 
