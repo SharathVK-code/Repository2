@@ -4,7 +4,11 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+
 public class Test_Listeners implements ITestListener {
+
+	ExtentReports extent = ExtentReporterNG.getReportObject();
 
 	@Override
 	public void onTestStart(ITestResult result) {
