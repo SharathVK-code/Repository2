@@ -11,7 +11,8 @@ public class ExtentReporterNG {
 		reporter.config().setReportName("Report_reportName");
 		reporter.config().setDocumentTitle("Report_Doc_Title");
 
-		extent = new ExtentReports();
+		
+		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Tester", "Sharath");
 		extent.setSystemInfo("Org", "TCS");
