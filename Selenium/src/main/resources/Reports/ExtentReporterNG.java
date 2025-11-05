@@ -10,8 +10,8 @@ public class ExtentReporterNG {
 		// ExtentReports, ExtentSparkReporter
 		String path = System.getProperty("user.dir") + "\\reports\\index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
-		reporter.config().setReportName("Report_reportName");
-		reporter.config().setDocumentTitle("Report_Doc_Title");
+		reporter.config().setReportName("Sharath_reportName");
+		reporter.config().setDocumentTitle("Sharath_Doc_Title");
 
 		
 		ExtentReports extent = new ExtentReports();
