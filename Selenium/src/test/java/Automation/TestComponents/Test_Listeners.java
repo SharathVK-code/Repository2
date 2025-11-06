@@ -18,7 +18,6 @@ public class Test_Listeners implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
-
 	}
 
 	@Override
