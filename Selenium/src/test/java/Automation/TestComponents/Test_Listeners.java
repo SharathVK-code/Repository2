@@ -8,6 +8,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import Reports.ExtentReporterNG;
+
 public class Test_Listeners implements ITestListener {
 
 	ExtentTest test;
@@ -53,6 +55,7 @@ public class Test_Listeners implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
+		extent.flush();
 
 	}
 
