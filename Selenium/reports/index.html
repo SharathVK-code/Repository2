@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Sharath_reportName</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 9, 2025 01:06:01 pm</span></a>
+<a href="#"><span class="badge badge-primary">Nov 9, 2025 01:12:02 pm</span></a>
 </li>
 </ul>
 </div>
@@ -80,14 +80,55 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">LoginErrorValidation</p>
             <p class="text-sm">
-              <span>1:06:19 pm</span> / <span>00:00:00:889</span>
+              <span>1:12:05 pm</span> / <span>00:00:00:477</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LoginErrorValidation</h5>
+<span class='badge badge-success'>11.09.2025 1:12:05 pm</span>
+<span class='badge badge-danger'>11.09.2025 1:12:05 pm</span>
+<span class='badge badge-default'>00:00:00:477</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:12:05 pm</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SubmitOrderErrorValidation</p>
+            <p class="text-sm">
+              <span>1:12:09 pm</span> / <span>00:00:03:064</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,11 +136,11 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">LoginErrorValidation</h5>
-<span class='badge badge-success'>11.09.2025 1:06:19 pm</span>
-<span class='badge badge-danger'>11.09.2025 1:06:20 pm</span>
-<span class='badge badge-default'>00:00:00:889</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<h5 class="test-status text-fail">SubmitOrderErrorValidation</h5>
+<span class='badge badge-success'>11.09.2025 1:12:09 pm</span>
+<span class='badge badge-danger'>11.09.2025 1:12:12 pm</span>
+<span class='badge badge-default'>00:00:03:064</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -108,9 +149,9 @@
 </div>    <div class="row mb-3"><div class="col-md-3">
     
 
-<img data-featherlight='C:\Users\ambat\git\repository2\Selenium\reports\LoginErrorValidation.png' src="C:\Users\ambat\git\repository2\Selenium\reports\LoginErrorValidation.png">
+<img data-featherlight='C:\Users\ambat\git\repository2\Selenium\reports\SubmitOrderErrorValidation.png' src="C:\Users\ambat\git\repository2\Selenium\reports\SubmitOrderErrorValidation.png">
   
-    <div class="title">LoginErrorValidation</div>
+    <div class="title">SubmitOrderErrorValidation</div>
 
     </div></div>
 <div class="detail-body mt-4">
@@ -119,12 +160,13 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>1:06:20 pm</td>
+        <td>1:12:12 pm</td>
         <td>
-          <textarea readonly class="code-block">org.junit.ComparisonFailure: expected:<[Incorrect email or password.]> but was:<[]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:18)
+          <textarea readonly class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at Automation.Tests.ErrorValidations.SubmitOrderErrorValidation(ErrorValidations.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -160,47 +202,6 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">SubmitOrderErrorValidation</p>
-            <p class="text-sm">
-              <span>1:06:25 pm</span> / <span>00:00:02:829</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">SubmitOrderErrorValidation</h5>
-<span class='badge badge-success'>11.09.2025 1:06:25 pm</span>
-<span class='badge badge-danger'>11.09.2025 1:06:28 pm</span>
-<span class='badge badge-default'>00:00:02:829</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:06:28 pm</td>
-        <td>
-          Test passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
@@ -223,12 +224,12 @@
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.junit.ComparisonFailure</p>
+<p class="name">java.lang.AssertionError</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.junit.ComparisonFailure</h4>
+<h4>java.lang.AssertionError</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -242,9 +243,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>13:06:19 pm</td>
+<td>13:12:09 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>LoginErrorValidation</a>
+<a href="#" class="linked" test-id='2' id='2'>SubmitOrderErrorValidation</a>
 </td>
 </tr>
 </tbody>
@@ -264,13 +265,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 9, 2025 01:06:01 pm</h3>
+<h3>Nov 9, 2025 01:12:02 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 9, 2025 01:06:28 pm</h3>
+<h3>Nov 9, 2025 01:12:12 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -340,7 +341,7 @@
 </div></div>
 <script>
 var timeline = {
-"LoginErrorValidation":0.889,"SubmitOrderErrorValidation":2.829
+"LoginErrorValidation":0.477,"SubmitOrderErrorValidation":3.064
 };
 </script>
 <div class="row">

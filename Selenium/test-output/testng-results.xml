@@ -2,29 +2,39 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-09T13:06:01 IST" name="Suite" finished-at="2025-11-09T13:06:28 IST" duration-ms="27098">
+  <suite started-at="2025-11-09T13:12:02 IST" name="Suite" finished-at="2025-11-09T13:12:12 IST" duration-ms="9760">
     <groups>
       <group name="errorHandling">
         <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
         <method signature="ErrorValidations.SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" name="SubmitOrderErrorValidation" class="Automation.Tests.ErrorValidations"/>
       </group> <!-- errorHandling -->
     </groups>
-    <test started-at="2025-11-09T13:06:01 IST" name="Error Validations" finished-at="2025-11-09T13:06:28 IST" duration-ms="27098">
+    <test started-at="2025-11-09T13:12:02 IST" name="Error Validations" finished-at="2025-11-09T13:12:12 IST" duration-ms="9760">
       <class name="Automation.Tests.ErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:06:01 IST" name="launchApplication" finished-at="2025-11-09T13:06:19 IST" duration-ms="18075" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:12:02 IST" name="launchApplication" finished-at="2025-11-09T13:12:05 IST" duration-ms="2313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:06:19 IST" name="LoginErrorValidation" finished-at="2025-11-09T13:06:20 IST" duration-ms="501" status="FAIL">
-          <exception class="org.junit.ComparisonFailure">
-            <message>
-              <![CDATA[expected:<[Incorrect email or password.]> but was:<[]>]]>
-            </message>
+        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:12:05 IST" name="LoginErrorValidation" finished-at="2025-11-09T13:12:05 IST" duration-ms="485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:12:05 IST" name="tearDown" finished-at="2025-11-09T13:12:05 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:12:05 IST" name="launchApplication" finished-at="2025-11-09T13:12:09 IST" duration-ms="3575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:12:09 IST" name="SubmitOrderErrorValidation" finished-at="2025-11-09T13:12:12 IST" duration-ms="2882" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: expected:<[Incorrect email or password.]> but was:<[]>
-at org.junit.Assert.assertEquals(Assert.java:117)
-at org.junit.Assert.assertEquals(Assert.java:146)
-at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:18)
+              <![CDATA[java.lang.AssertionError
+at org.junit.Assert.fail(Assert.java:87)
+at org.junit.Assert.assertTrue(Assert.java:42)
+at org.junit.Assert.assertTrue(Assert.java:53)
+at Automation.Tests.ErrorValidations.SubmitOrderErrorValidation(ErrorValidations.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -53,23 +63,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:06:20 IST" name="tearDown" finished-at="2025-11-09T13:06:20 IST" duration-ms="112" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:06:20 IST" name="launchApplication" finished-at="2025-11-09T13:06:25 IST" duration-ms="5055" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:06:25 IST" name="SubmitOrderErrorValidation" finished-at="2025-11-09T13:06:28 IST" duration-ms="2830" status="PASS">
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubmitOrderErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:06:28 IST" name="tearDown" finished-at="2025-11-09T13:06:28 IST" duration-ms="73" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T13:12:12 IST" name="tearDown" finished-at="2025-11-09T13:12:12 IST" duration-ms="130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
