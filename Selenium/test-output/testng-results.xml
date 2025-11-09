@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-09T15:40:11 IST" name="Suite" finished-at="2025-11-09T15:40:27 IST" duration-ms="15064">
+  <suite started-at="2025-11-09T16:10:14 IST" name="Suite" finished-at="2025-11-09T16:10:34 IST" duration-ms="19363">
     <groups>
+      <group name="purchase">
+        <method signature="ZaraCoat3_POM_Standard_e2e_morph.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" name="submitOrder" class="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph"/>
+      </group> <!-- purchase -->
       <group name="errorHandling">
-        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
-        <method signature="ErrorValidations.SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" name="SubmitOrderErrorValidation" class="Automation.Tests.ErrorValidations"/>
+        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
+        <method signature="ErrorValidations.SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" name="SubmitOrderErrorValidation" class="Automation.Tests.ErrorValidations"/>
       </group> <!-- errorHandling -->
     </groups>
-    <test started-at="2025-11-09T15:40:11 IST" name="Error Validations" finished-at="2025-11-09T15:40:27 IST" duration-ms="15064">
+    <test started-at="2025-11-09T16:10:14 IST" name="Error Validations" finished-at="2025-11-09T16:10:26 IST" duration-ms="11366">
       <class name="Automation.Tests.ErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T15:40:11 IST" name="launchApplication" finished-at="2025-11-09T15:40:20 IST" duration-ms="8979" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" started-at="2025-11-09T16:10:14 IST" name="launchApplication" finished-at="2025-11-09T16:10:17 IST" duration-ms="2369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T15:40:20 IST" name="LoginErrorValidation" finished-at="2025-11-09T15:40:21 IST" duration-ms="473" status="FAIL">
+        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" started-at="2025-11-09T16:10:17 IST" name="LoginErrorValidation" finished-at="2025-11-09T16:10:19 IST" duration-ms="1862" status="FAIL">
           <exception class="org.junit.ComparisonFailure">
             <message>
               <![CDATA[expected:<...ct email or password[]> but was:<...ct email or password[.]>]]>
@@ -39,33 +42,27 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T15:40:21 IST" name="tearDown" finished-at="2025-11-09T15:40:21 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" started-at="2025-11-09T16:10:19 IST" name="tearDown" finished-at="2025-11-09T16:10:19 IST" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T15:40:21 IST" name="launchApplication" finished-at="2025-11-09T15:40:23 IST" duration-ms="1863" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" started-at="2025-11-09T16:10:19 IST" name="launchApplication" finished-at="2025-11-09T16:10:22 IST" duration-ms="3294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T15:40:23 IST" name="SubmitOrderErrorValidation" finished-at="2025-11-09T15:40:26 IST" duration-ms="2844" status="FAIL">
+        <test-method signature="SubmitOrderErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" started-at="2025-11-09T16:10:22 IST" name="SubmitOrderErrorValidation" finished-at="2025-11-09T16:10:25 IST" duration-ms="3025" status="FAIL">
           <exception class="java.lang.AssertionError">
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError
@@ -87,29 +84,77 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubmitOrderErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@10289886]" started-at="2025-11-09T15:40:26 IST" name="tearDown" finished-at="2025-11-09T15:40:27 IST" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@37911f88]" started-at="2025-11-09T16:10:26 IST" name="tearDown" finished-at="2025-11-09T16:10:26 IST" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Automation.Tests.ErrorValidations -->
     </test> <!-- Error Validations -->
+    <test started-at="2025-11-09T16:10:14 IST" name="submit Order" finished-at="2025-11-09T16:10:34 IST" duration-ms="19363">
+      <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:15 IST" name="launchApplication" finished-at="2025-11-09T16:10:17 IST" duration-ms="2577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:17 IST" name="submitOrder" data-provider="getData" finished-at="2025-11-09T16:10:23 IST" duration-ms="6201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SharathVK@18, product=ADIDAS ORIGINAL, email=ambati.sharath500@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:23 IST" name="tearDown" finished-at="2025-11-09T16:10:24 IST" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:24 IST" name="launchApplication" finished-at="2025-11-09T16:10:25 IST" duration-ms="1688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:25 IST" name="submitOrder" data-provider="getData" finished-at="2025-11-09T16:10:31 IST" duration-ms="5938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SharathVK@18, product=ZARA COAT 3, email=ambatisarachandra@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:31 IST" name="tearDown" finished-at="2025-11-09T16:10:31 IST" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:31 IST" name="launchApplication" finished-at="2025-11-09T16:10:33 IST" duration-ms="1587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:33 IST" name="OrderHistoryTest" finished-at="2025-11-09T16:10:34 IST" depends-on-methods="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph.submitOrder" duration-ms="780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@28194a50]" started-at="2025-11-09T16:10:34 IST" name="tearDown" finished-at="2025-11-09T16:10:34 IST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
+    </test> <!-- submit Order -->
   </suite> <!-- Suite -->
 </testng-results>
