@@ -1,66 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results retried="3" ignored="1" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-09T16:13:20 IST" name="Default suite" finished-at="2025-11-09T16:13:41 IST" duration-ms="21793">
+  <suite started-at="2025-11-09T16:40:36 IST" name="Default suite" finished-at="2025-11-09T16:40:51 IST" duration-ms="14166">
     <groups>
-      <group name="purchase">
-        <method signature="ZaraCoat3_POM_Standard_e2e_morph.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" name="submitOrder" class="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph"/>
-      </group> <!-- purchase -->
+      <group name="errorHandling">
+        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" name="LoginErrorValidation" class="Automation.Tests.ErrorValidations"/>
+      </group> <!-- errorHandling -->
     </groups>
-    <test started-at="2025-11-09T16:13:20 IST" name="Default test" finished-at="2025-11-09T16:13:41 IST" duration-ms="21793">
-      <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:20 IST" name="launchApplication" finished-at="2025-11-09T16:13:23 IST" duration-ms="3257" status="PASS">
+    <test started-at="2025-11-09T16:40:36 IST" name="Default test" finished-at="2025-11-09T16:40:51 IST" duration-ms="14166">
+      <class name="Automation.Tests.ErrorValidations">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:36 IST" name="launchApplication" finished-at="2025-11-09T16:40:39 IST" duration-ms="2841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:23 IST" name="submitOrder" data-provider="getData" finished-at="2025-11-09T16:13:29 IST" duration-ms="5737" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=SharathVK@18, product=ADIDAS ORIGINAL, email=ambati.sharath500@gmail.com}]]>
-              </value>
-            </param>
-          </params>
+        <test-method retried="true" signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:39 IST" name="LoginErrorValidation" finished-at="2025-11-09T16:40:40 IST" duration-ms="514" status="SKIP">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<...ct email or password[]> but was:<...ct email or password[.]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<...ct email or password[]> but was:<...ct email or password[.]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:29 IST" name="tearDown" finished-at="2025-11-09T16:13:29 IST" duration-ms="110" status="PASS">
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:40 IST" name="tearDown" finished-at="2025-11-09T16:40:40 IST" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:29 IST" name="launchApplication" finished-at="2025-11-09T16:13:32 IST" duration-ms="3031" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:40 IST" name="launchApplication" finished-at="2025-11-09T16:40:44 IST" duration-ms="4316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:32 IST" name="submitOrder" data-provider="getData" finished-at="2025-11-09T16:13:38 IST" duration-ms="5746" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=SharathVK@18, product=ZARA COAT 3, email=ambatisarachandra@gmail.com}]]>
-              </value>
-            </param>
-          </params>
+        <test-method retried="true" signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:44 IST" name="LoginErrorValidation" finished-at="2025-11-09T16:40:45 IST" duration-ms="463" status="SKIP">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[Incorrect email or password]> but was:<[]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[Incorrect email or password]> but was:<[]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:38 IST" name="tearDown" finished-at="2025-11-09T16:13:38 IST" duration-ms="99" status="PASS">
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:45 IST" name="tearDown" finished-at="2025-11-09T16:40:45 IST" duration-ms="96" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:38 IST" name="launchApplication" finished-at="2025-11-09T16:13:40 IST" duration-ms="2685" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:45 IST" name="launchApplication" finished-at="2025-11-09T16:40:47 IST" duration-ms="1784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:40 IST" name="OrderHistoryTest" finished-at="2025-11-09T16:13:41 IST" depends-on-methods="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph.submitOrder" duration-ms="761" status="PASS">
+        <test-method retried="true" signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:47 IST" name="LoginErrorValidation" finished-at="2025-11-09T16:40:47 IST" duration-ms="441" status="SKIP">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<...ct email or password[]> but was:<...ct email or password[.]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<...ct email or password[]> but was:<...ct email or password[.]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph@229f66ed]" started-at="2025-11-09T16:13:41 IST" name="tearDown" finished-at="2025-11-09T16:13:41 IST" duration-ms="87" status="PASS">
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:47 IST" name="tearDown" finished-at="2025-11-09T16:40:47 IST" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:47 IST" name="launchApplication" finished-at="2025-11-09T16:40:50 IST" duration-ms="2867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:50 IST" name="LoginErrorValidation" finished-at="2025-11-09T16:40:51 IST" duration-ms="476" status="FAIL">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<...ct email or password[]> but was:<...ct email or password[.]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<...ct email or password[]> but was:<...ct email or password[.]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at Automation.Tests.ErrorValidations.LoginErrorValidation(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Automation.Tests.ErrorValidations@6a6cb05c]" started-at="2025-11-09T16:40:51 IST" name="tearDown" finished-at="2025-11-09T16:40:51 IST" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Automation.Tests.ErrorValidations -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

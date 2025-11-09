@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph">
+      <class name="Automation.Tests.ErrorValidations">
         <methods>
           <include name="tearDown"/>
           <include name="launchApplication"/>
-          <include name="OrderHistoryTest" invocation-numbers="1"/>
-          <include name="submitOrder"/>
+          <include name="LoginErrorValidation"/>
         </methods>
-      </class> <!-- Automation.Tests.ZaraCoat3_POM_Standard_e2e_morph -->
+      </class> <!-- Automation.Tests.ErrorValidations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

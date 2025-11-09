@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 import Automation.PageObjects.ZaraCoat3_CheckOutPage;
 import Automation.PageObjects.ZaraCoat3_ProductCatalog;
 import Automation.TestComponents.BaseTest;
+import Automation.TestComponents.Retry;
 
 public class ErrorValidations extends BaseTest {
 
-	@Test(groups = { "errorHandling" })
+	@Test(groups = { "errorHandling" }, retryAnalyzer = Retry.class)
 	public void LoginErrorValidation() throws IOException, InterruptedException {
 
 		landingPage.loginUser("ambatisarachandra@gmail.com", "SharathVK@18@18");
