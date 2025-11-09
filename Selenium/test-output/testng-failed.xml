@@ -16,6 +16,7 @@
           <include name="SubmitOrderErrorValidation"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
+          <include name="LoginErrorValidation"/>
         </methods>
       </class> <!-- Automation.Tests.ErrorValidations -->
     </classes>
