@@ -19,7 +19,7 @@ public class ErrorValidations extends BaseTest {
 
 	}
 
-	@Test
+	@Test(groups = { "errorHandling" })
 	public void SubmitOrderErrorValidation() throws IOException, InterruptedException {
 
 		String desiredProduct = "ZARA COAT 3";
