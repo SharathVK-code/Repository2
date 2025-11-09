@@ -2,6 +2,7 @@ package Automation.TestComponents;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -32,10 +33,17 @@ public class Test_Listeners extends BaseTest implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		test.fail(result.getThrowable());
 
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		// Screenshot
 		String filepath = null;
 		try {
-			filepath = getScreenShot(result.getMethod().getMethodName());
+			filepath = getScreenShot(result.getMethod().getMethodName(), driver);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
