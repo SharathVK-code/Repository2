@@ -17,5 +17,5 @@
             <class name="Automation.Tests.ErrorValidations"/>
         </classes>
     </test>
-
+    
 </suite>
