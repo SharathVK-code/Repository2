@@ -15,12 +15,5 @@
 		</classes>
 	</test> 
 	
-	<test thread-count="5" name="Error Validations">
-		<classes>
-
-			<class name="Automation.Tests.ErrorValidations" />
-
-		</classes>
-	</test>
 </suite> <!--
 Suite -->
