@@ -39,6 +39,10 @@ public class BaseTest {
 				: prop.getProperty("browser"); // Ternary Operator
 //		String browserName = prop.getProperty("browser");
 
+//		jenkins
+//		 user - Sharath
+//		 password = SharathVK@18
+
 		if (browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 
