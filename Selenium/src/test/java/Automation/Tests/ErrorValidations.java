@@ -30,7 +30,7 @@ public class ErrorValidations extends BaseTest {
 		// CheckOut page
 		ZaraCoat3_CheckOutPage checkOutPage = productCatalog.addProductToCart(desiredProduct);
 		boolean flag = checkOutPage.VerifyProductDisplay("ZARA COAT 33");
-		Assert.assertTrue(flag);
+		Assert.assertFalse(flag);
 
 	}
 
