@@ -16,6 +16,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 	</properties>
+	
+	// jenkins
+	// user - Sharath
+	// password = SharathVK@18
 
 	<dependencies>
 		<!--
