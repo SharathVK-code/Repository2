@@ -29,6 +29,7 @@ public class ZaraCoat3_ProductCatalog extends AbstractComponent {
 	By addToCart = By.cssSelector(".mb-3 button:last-of-type");
 	By toast = By.cssSelector(".toast-message");
 	By cartButton = By.cssSelector(".btn-custom .fa-shopping-cart");
+	By spinner = By.cssSelector(".ngx-spinner-overlay");
 
 	public List<WebElement> GetProductsList() {
 
@@ -46,7 +47,8 @@ public class ZaraCoat3_ProductCatalog extends AbstractComponent {
 	public ZaraCoat3_CheckOutPage addProductToCart(String productName) throws InterruptedException {
 		WebElement ourProd = getProductByName(productName);
 		ourProd.findElement(addToCart).click();
-//		WaitForTheElementToDisappear(toast);
+		waitForSpinnerToDisappear(spinner);
+//		WaitForTheElementToDisappear(spinner);
 		Thread.sleep(2000);
 		driver.findElement(cartButton).click();
 		ZaraCoat3_CheckOutPage checkOutPage = new ZaraCoat3_CheckOutPage(driver);
