@@ -41,7 +41,7 @@ public class BaseTest {
 //		String browserName = prop.getProperty("browser");
 
 //		jenkins
-//		java -jar jenkins.war --httpPort=9090
+//		command to start jenkins - "java -jar jenkins.war --httpPort=9090"
 //		 user - Sharath
 //		 password = SharathVK@18
 
