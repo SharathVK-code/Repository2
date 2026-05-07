@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Automation.Tests.ErrorValidations">
+      <class name="Automation.Tests.ZaraCoat3_Standard_e2e">
         <methods>
-          <include name="SubmitOrderErrorValidation"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
+          <include name="run"/>
         </methods>
-      </class> <!-- Automation.Tests.ErrorValidations -->
+      </class> <!-- Automation.Tests.ZaraCoat3_Standard_e2e -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
